@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
+using Temperature.Interfaces;
 
 namespace Temperature.Controllers
 {
@@ -8,10 +9,19 @@ namespace Temperature.Controllers
     [ApiController]
     public class TemperatureController : ControllerBase
     {
-        [HttpGet]
-        public async Task KelvinFarenheit(int tempc)
-        {
 
+        private readonly ICalculateTemperatureService _temperatureService;
+
+        public TemperatureController(ICalculateTemperatureService temperatureService)
+        {
+            _temperatureService = temperatureService;
+        }
+
+        [HttpGet]
+        [Route("kelvinfarenheit")]
+        public object KelvinFarenheit(int tempc)
+        {
+          return _temperatureService.CalcFarenheitKelvin(tempc);    
         }
     }
 }
