@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 using Temperature.Interfaces;
+using Temperature.Models;
 
 namespace Temperature.Controllers
 {
@@ -19,7 +20,7 @@ namespace Temperature.Controllers
 
         [HttpGet]
         [Route("kelvinfarenheit")]
-        public object KelvinFarenheit(int tempc)
+        public KelvinFarenheit CalculateKelvinFarenheit(int tempc)
         {
           return _temperatureService.CalcFarenheitKelvin(tempc);    
         }
