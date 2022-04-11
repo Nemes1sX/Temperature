@@ -20,9 +20,9 @@ namespace Temperature.Controllers
 
         [HttpGet]
         [Route("kelvinfarenheit")]
-        public KelvinFarenheit CalculateKelvinFarenheit(int tempc)
+        public double CalculateKelvinFarenheit(int temp, string convert)
         {
-          return _temperatureService.CalcFarenheitKelvin(tempc);    
+          return _temperatureService.CalcFarenheitKelvin(temp, convert);    
         }
     }
 }

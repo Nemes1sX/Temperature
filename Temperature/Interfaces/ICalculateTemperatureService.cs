@@ -5,6 +5,6 @@ namespace Temperature.Interfaces
 {
     public interface ICalculateTemperatureService
     {
-        KelvinFarenheit CalcFarenheitKelvin(int tempC);
+        double CalcFarenheitKelvin(int tempC, string convertParam);
     }
 }
