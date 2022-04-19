@@ -5,7 +5,7 @@ namespace Temperature.Services
 {
     public class TemperatureService : ICalculateTemperatureService
     {
-        public double CalcFarenheitKelvin(int tempC, string convert)
+        public double CalculateTemperature(int tempC, string convert)
         {
             switch (convert)
             {
