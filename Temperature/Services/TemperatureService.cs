@@ -20,7 +20,7 @@ namespace Temperature.Services
                 case "fc":
                     return Math.Round((tempC - 32) / 1.8, 2);
                 case "fk":
-                    return Math.Round((tempC + 459.67) * (5 / 9), 2);
+                    return Math.Round((tempC + 459.67) * 5 / 9, 2);
                 case "rc":
                     return Math.Round((tempC - 7.5) / 0.525, 2);
                 case "cr":
