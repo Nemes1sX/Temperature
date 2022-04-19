@@ -4,6 +4,6 @@ namespace Temperature.Interfaces
 {
     public interface ICalculateTemperatureService
     {
-        double CalculateTemperature(int tempC, string convertParam);
+        double CalculateTemperature(double tempC, string convertParam);
     }
 }

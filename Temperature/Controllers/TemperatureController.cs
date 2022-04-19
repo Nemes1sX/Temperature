@@ -19,7 +19,7 @@ namespace Temperature.Controllers
 
         [HttpGet]
         [Route("kelvinfarenheit")]
-        public double CalculateKelvinFarenheit(int temp, string convert)
+        public double CalculateKelvinFarenheit(double temp, string convert)
         {
           return _temperatureService.CalculateTemperature(temp, convert);    
         }
